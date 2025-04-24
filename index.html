@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <Main>
+        <!--- El <form> es esencial para recopilar y enviar datos del usuario a un servidor. Se usa en diversas aplicaciones, como:
+Autenticación: formularios de inicio de sesión o registro.
+- Recopilación de información: encuestas, comentarios, formularios de contacto.
+- Procesamiento de pagos: compras en línea con datos de tarjeta de crédito.
+- Interacciones avanzadas: búsqueda en sitios web, filtrado de productos, entre otros.-->
+        <form>
+            
+            <!--Label mejoran la accesibilidad porque los lectores las relacionan con sus campos-->
+            <!--- 
+                [A-Za-z] permite todas las letras en mayúscula y minúscula.
+                \s permite espacios en blanco.
+                + indica que se pueden escribir varios caracteres, no solo uno.
+                    Con este patrón, podras escribir nombres como "Juan Pérez", pero aún así se restringirían números 
+                    y caracteres especiales.-->
+
+            <label for="Nombre:">Nombre:</label>
+            <input type="text" pattern="[A-Za-z\s]+"   name="Nombre" id="Nombre" placeholder="Pone tu nombre.">
+
+
+            <label for="mail">Mail:</label>
+            <input type="email" name="email" id="email" placeholder="Correo@correo.com">
+
+            <!--Placeholder para escribir en el recuadro-->
+            <label for="mensaje"></label>
+            <textarea name="mensaje" id="mensaje" placeholder="Escribe tu mensaje aqui." rows="4" cols="45"></textarea>
+
+            <!--Button para enviar-->
+            <button type="submit">Send</button>
+
+        </form>
+
+    </Main>
+
+</body>
+
+</html>
